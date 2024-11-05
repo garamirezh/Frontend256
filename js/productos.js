@@ -1,5 +1,5 @@
 function mostrarProductos() {
-    let request = sendRequest('empresas', 'GET', '');
+    let request = sendRequest('productos', 'GET', '');
     let table = document.getElementById('productos-table');
     table.innerHTML = "";
     request.onload = function (){
