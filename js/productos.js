@@ -90,9 +90,9 @@ function modificarProductos(id) {
    let cat = document.getElementById('categoria-c').value
    let sto = document.getElementById('stock-s').value
    let dis = document.getElementById('disponible-d').value
-   let fec = document.getElementById('fecha_creacion-f').value
+//    let fec = document.getElementById('fecha_creacion-f').value
    let ult = document.getElementById('ultima_actualizacion-u').value
-   let data = {'nombre':nom, 'descripcion':des, 'precio':pre, 'categoria':cat, 'stock':sto, 'disponible':dis, 'fechaCreacion':fec, 'ultimaActualizacion':ult}
+   let data = {'nombre':nom, 'descripcion':des, 'precio':pre, 'categoria':cat, 'stock':sto, 'disponible':dis, 'ultimaActualizacion':ult}
    let request = sendRequest('productos/'+id, 'PUT', data);
    request.onload = function () {
     window.location='productos.html';
