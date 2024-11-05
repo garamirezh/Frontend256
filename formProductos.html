@@ -62,12 +62,12 @@
 
                 <div class="mb-3">
                     <label for="fecha_creacion-f" class="form-label">Fecha de Creacion</label>
-                    <input type="date" onload="getDate()" class="form-control" name="fecha_creacion-f" id="fecha_creacion-f">
+                    <input type="datetime-local" onload="getDate()" class="form-control" name="fecha_creacion-f" id="fecha_creacion-f">
                 </div>
 
                 <div class="mb-3">
                     <label for="ultima_actualizacion-u" class="form-label">Ultima Actualizacion</label>
-                    <input type="date" onload="getDate()"  class="form-control" name="ultima_actualizacion-u" id="ultima_actualizacion-u">
+                    <input type="datetime-local" onload="getDate()"  class="form-control" name="ultima_actualizacion-u" id="ultima_actualizacion-u">
                 </div>
 
                 <button type="button" class="btn btn-primary" onclick="guardarProductos()">Guardar</button>
@@ -84,7 +84,8 @@
     <script>
         function getDate(){
             var today = new Date();
-            document.getElementById("date").value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+            document.getElementById("fecha_creacion-f").value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+            document.getElementById("ultima_actualizacion-u").value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
         }
 
         window.onload = function () {
