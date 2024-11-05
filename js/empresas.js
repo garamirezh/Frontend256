@@ -70,6 +70,7 @@ function cargarDatos(id) {
         ciu.value = data.ciudad
         tel.value = data.telefono
         dir.value = data.direccion
+        noc.value = data.nombrecontacto
 
         console.log(data)
    }
